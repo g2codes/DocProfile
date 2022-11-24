@@ -1,38 +1,465 @@
-.App {
-  text-align: center;
+.c-doctors {
+  padding: 90px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content-wide .content-wrapper,
+footer .content-wrapper {
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.content-wrapper {
+  height: auto;
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.columns--reverse {
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.columns {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.columns--2-widecontent .columns__item--title {
+  width: 29.565217391304348%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.c-common-issues__eyebrow,
+.c-employer-services h2,
+.c-process-flow__header.c-process-flow--header-eyebrow,
+.c-process-flow__title-eyebrow,
+.eyebrow {
+  text-transform: uppercase;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #2277a2;
+  font-size: 15px;
+  line-height: 15px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  display: block;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+body,
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+  -webkit-text-size-adjust: 100%;
+}
+
+.c-doctors__checklist {
+  font-size: 17px;
+  color: #4c4c4c;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+.c-basic-content h3,
+.c-expandable-list .answer h3,
+.c-faq-signup-callout header,
+.c-health-tip-single__body h3,
+.c-hero__subtitle h3,
+.c-hero__title,
+.c-press__featured-item header,
+.c-press__list-item header,
+.c-process-flow__header.c-process-flow--header-standard,
+.c-questions__aside-callout .speak,
+.header--article-list,
+a,
+abbr,
+acronym,
+address,
+applet,
+big,
+blockquote,
+body,
+body#tinymce.wp-editor h3,
+caption,
+cite,
+code,
+dd,
+del,
+dfn,
+div,
+dl,
+dt,
+em,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+object,
+ol,
+p,
+pre,
+q,
+s,
+samp,
+small,
+span,
+strike,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr,
+tt,
+ul,
+var {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+ul {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+body,
+html {
+  line-height: 1.5;
+}
+
+.c-doctors__cta {
+  margin-top: 20px;
+}
+
+.c-doctors__copy {
+  text-align: right;
+}
+
+body,
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-kerning: auto;
+  -webkit-text-size-adjust: 100%;
+}
+
+.columns--2-widecontent .columns__item--content {
+  width: 68.26086956521739%;
+}
+
+div {
+  display: block;
+}
+
+body,
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-kerning: auto;
+  -webkit-text-size-adjust: 100%;
+}
+
+.c-basic-content h3,
+.c-expandable-list .answer h3,
+.c-faq-signup-callout header,
+.c-health-tip-single__body h3,
+.c-hero__subtitle h3,
+.c-hero__title,
+.c-press__featured-item header,
+.c-press__list-item header,
+.c-process-flow__header.c-process-flow--header-standard,
+.c-questions__aside-callout .speak,
+.header--article-list,
+a,
+abbr,
+acronym,
+address,
+applet,
+big,
+blockquote,
+body,
+body#tinymce.wp-editor h3,
+caption,
+cite,
+code,
+dd,
+del,
+dfn,
+div,
+dl,
+dt,
+em,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+object,
+ol,
+p,
+pre,
+q,
+s,
+samp,
+small,
+span,
+strike,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr,
+tt,
+ul,
+var {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+*,
+body,
+html {
+  box-sizing: border-box;
+}
+
+.c-doctors__list {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c-doctors__profile {
+  border: 1px solid #dee1e5;
+  flex-basis: 31.57894736842105%;
+  overflow: hidden;
+  background: #677e953d;
+  border-radius: 4px;
+  color: #4c4c4c;
+  padding: 45px 22px 55px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.c-doctors__profile + .c-doctors__profile {
+  margin-left: 19px;
+}
+
+.content-wide .content-wrapper,
+footer .content-wrapper {
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: block;
+}
+
+img {
+  width: 200px;
+  object-fit: cover;
+}
+.stars_5 img {
+  width: 20px;
+  object-fit: cover;
+}
+
+.c-common-issues__eyebrow,
+.c-employer-services h2,
+.c-process-flow__header.c-process-flow--header-eyebrow,
+.c-process-flow__title-eyebrow,
+.eyebrow {
+  text-transform: uppercase;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #2277a2;
+  font-size: 15px;
+  line-height: 15px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: block;
+}
+
+.c-hero__title,
+.c-process-flow__header.c-process-flow--header-standard,
+h2 {
+  font-size: 42px;
+  line-height: 1em;
+  font-family: Georgia, Times, Times New Roman, serif;
+  font-weight: 700;
+  color: #0f3c6b;
+  margin-bottom: 20px;
+}
+
+.c-doctors__checklist {
+  font-size: 17px;
+  color: #4c4c4c;
+}
+
+.c-doctors__checklist li {
+  line-height: 18px;
+  padding-right: 34px;
+  position: relative;
+  background: url(https://livehealthonline.com/wp-content/themes/lho/images/components/doctors/checkmark.svg)
+    100% 0 no-repeat;
+}
+
+.c-doctors__checklist li + li {
+  margin-top: 13px;
+}
+
+.c-doctors__cta {
+  margin-top: 20px;
+}
+
+.ui-btn--solid {
+  color: #fff;
+  background: #008298;
+  border: 1px solid #008298;
+}
+
+.ui-btn {
+  line-height: 18px;
+  padding: 15px 30px;
+  font-size: 18px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 700;
+  border-radius: 6px;
+  box-shadow: 2px 4px 6px 0 rgb(0 0 0 / 10%);
+  transition: all 0.3s;
+}
+
+.c-doctors__profile-image {
+  width: 116px;
+  height: 116px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border: 1px solid #c5c5c5;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.c-doctors__profile > * {
+  white-space: normal;
+}
+
+.c-doctors__profile-image > img {
+  width: 100%;
+  height: auto;
+}
+
+.c-doctors__profile-name {
+  font-weight: 700;
+}
+.c-doctors__profile-field,
+.c-doctors__profile-name {
+  font-size: 16px;
+}
+.c-doctors__profile > * {
+  white-space: normal;
+}
+.c-doctors__profile-field {
+  margin-bottom: 13px;
+}
+
+.c-doctors__profile-rating {
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: #666;
 }
